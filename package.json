@@ -1,0 +1,33 @@
+{
+  "name": "proyecto2_pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rimraf .features-gen playwright-report test-results reports/json reports/html-reports",
+    "test:bdd": "bddgen && playwright test",
+    "test:declarativo": "bddgen --tags @declarativo && playwright test",
+    "test:imperativo": "bddgen --tags @imperativo && playwright test",
+    "test:outline": "bddgen --tags @outline && playwright test",
+    "test:carga": "bddgen --tags @carga && playwright test",
+    "report:cucumber": "node generate-report.js",
+    "test:browsers": "run-s -c clean:reports test:declarativo report:cucumber"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "multiple-cucumber-html-reporter": "3.10.0",
+    "npm-run-all": "^4.1.5",
+    "open": "8.4.2",
+    "playwright-bdd": "^9.2.0",
+    "rimraf": "^6.1.3",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1"
+  }
+}
