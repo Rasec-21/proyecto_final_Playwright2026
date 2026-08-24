@@ -137,5 +137,7 @@ jobs:
             echo "======================================"
             echo "✅ TODAS LAS PRUEBAS FINALIZARON CORRECTAMENTE"
             echo "======================================"
+            fi
           fi
-        fi
+
+        
