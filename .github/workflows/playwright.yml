@@ -136,8 +136,4 @@ jobs:
           else
             echo "======================================"
             echo "✅ TODAS LAS PRUEBAS FINALIZARON CORRECTAMENTE"
-            echo "======================================"
-            fi
-          fi
-
-        
+            echo "======================================"        
